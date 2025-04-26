@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Sederhana</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="w-full max-w-md bg-white rounded-lg shadow-lg flex flex-col overflow-hidden">
+        <div class="bg-green-500 text-white p-4 text-center text-lg font-semibold">
+            Chatbot kandah
+        </div>
+
+        <div id="chat-box" class="flex-1 p-4 overflow-y-auto space-y-4 max-h-80">
+            
+        </div>
+
+        <div class="flex border-t p-2">
+            <input 
+                id="user-input"
+                type="text" 
+                placeholder="Ketik pesan..."
+                class="flex-1 border rounded-l-md px-4 py-2 focus:outline-none"
+            >
+            <button 
+                onclick="sendMessage()" 
+                class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-r-md">
+                Kirim
+            </button>
+        </div>
+    </div>
+
+    <script>
+        function sendMessage() {
+            const userInput = document.getElementById('user-input');
+            const message = userInput.value.trim();
+            if (message === '') return;
+
+            addMessage('user', message);
+            userInput.value = '';
+
+            fetch('http://127.0.0.1:5000/chatbot', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ message: message })
+            })
+            .then(response => response.json())
+            .then(data => {
+                addMessage('bot', data.response);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                addMessage('bot', 'Maaf, terjadi kesalahan.');
+            });
+        }
+
+        function addMessage(sender, text) {
+            const chatBox = document.getElementById('chat-box');
+            const messageElement = document.createElement('div');
+            if (sender === 'user') {
+                messageElement.className = 'bg-green-100 self-end p-2 rounded-lg max-w-xs ml-auto';
+            } else {
+                messageElement.className = 'bg-gray-200 self-start p-2 rounded-lg max-w-xs';
+            }
+            messageElement.innerText = text;
+            chatBox.appendChild(messageElement);
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }
+    </script>
+</body>
+</html>

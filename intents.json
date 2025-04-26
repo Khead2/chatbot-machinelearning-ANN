@@ -1,0 +1,581 @@
+{
+    "intents": [
+        {
+            "tag": "greeting",
+            "patterns": [
+                "Halo",
+                "Hai",
+                "Hi",
+                "Apa kabar?",
+                "Selamat siang",
+                "Selamat sore"
+
+                ],
+            "responses": ["Halo! Ada yang bisa saya bantu?", "Selamat datang, ada yang perlu Anda tanyakan?", "Hai, bagaimana saya dapat membantu?"]
+        },
+        {
+            "tag": "salam",
+            "patterns": [
+                "assalamualaikum",
+                "assalamu'alaikum",
+                "asalamualaikum",
+                "assalamualaikum wr wb",
+                "assalamualaikum warahmatullahi wabarakatuh"
+            ],
+            "responses": ["Waalaikumsalam! Ada yang bisa saya bantu?", "Waalaikumsalam, Selamat datang, ada yang perlu Anda tanyakan?", "Waalaikumsalam Wr. Wb. Hai, bagaimana saya dapat membantu?"]
+        },
+        {
+            "tag": "thanks",
+            "patterns": ["Terima kasih",
+                "Makasih",
+                "Terima kasih banyak",
+                "Keren, terima kasih",
+                "Thanks",
+                "Makasih banyak",
+                "Saya sangat berterima kasih",
+                "Terima kasih sekali lagi"
+                ],
+            "responses": ["Sama-sama!", "Senang bisa membantu.", "Terima kasih kembali."]
+        },
+        {
+            "tag": "chatbot_can_do",
+            "patterns": [
+                "Apa yang bisa kamu lakukan?",
+                "Kamu bisa bantu apa saja?",
+                "Informasi apa yang bisa kamu berikan?",
+                "Fungsi chatbot ini apa?",
+                 "Kamu bisa ngapain?",
+                "Apa saja informasi yang kamu punya?",
+                "Apa kemampuanmu?",
+                "Fitur apa saja yang kamu miliki?"
+                ],
+            "responses": [
+                "Saya dapat memberikan informasi terkait :\n1. Pendaftaran sekolah\n2. jadwal pendaftaran\n3. Syarat pendaftaran,\n4. Informasi biaya,\n5 Informasi beasiswa\n6 Tata cara pendaftaran\n\n Saya juga dapat memberikan informasi Sekolah seperti : \n- Informasi Fasilitas sekolah\n- Jurusan Yang ada di SMK Kesatrian Purwokerto"
+                ]
+        },
+        {
+            "tag": "agree",
+            "patterns": [
+                "oke",
+                "siap",
+                "baiklah",
+                "iya",
+                "Mantap",
+                "keren",
+                "benar",
+                "oke, siap"
+                ],
+            "responses": [
+                "Baik, ada yang bisa saya bantu lagi?"
+            ]
+        },
+        {
+            "tag": "jadwal_pendaftaran",
+            "patterns": [
+                "Kapan jadwal pendaftaran dibuka?",
+                "Tanggal berapa PPDB dimulai?",
+                "Kapan pendaftaran di tutup ?",
+                "Kapan Penututupan pendaftaran nya ?",
+                "Jadwal pendaftaran ",
+                "Tanggal berapa PPDB dimulai ?",
+                "Pendaftaran dibuka sampai kapan?",
+                "Jadwal penerimaan siswa baru?"
+            ],
+            "responses": ["Pendaftaran dibuka pada bulan Januari - Agustus 2025. Pastikan Anda memeriksanya secara berkala pada website PPDB sekolah.\n\nhttps://ppdb.smkkesatrianpwt.sch.id/"]
+        },
+        {
+            "tag": "jambuka_tutup",
+            "patterns": [
+                "Jam berapa pendaftaran dibuka ?",
+                "Jam berapa saya bisa mulai daftar?",
+                "Pendaftaran di tutup jam berapa ?",
+                "penutupan pendaftaran di jam berapa ?",
+                "Jam buka pendaftaran",
+                "Jam tutup pendaftaran",
+                "Kapan dibuka dan ditutup pendaftaran ?",
+                "Pendaftarannya buka sampai jam berapa ya?"
+                ],
+            "responses": ["Pendaftaran di buka pada pukul 07:00 hingga 05:00 WIB"]
+        },
+        {
+            "tag": "syarat_pendaftaran",
+            "patterns": [
+                "Apa syarat pendaftaran sekolah?",
+                "Dokumen apa saja yang dibutuhkan?",
+                "Syarat pendaftaran apa saja?",
+                "Apa yang harus disiapkan untuk mendaftar?",
+                "Berkas pendaftaran",
+                "Apa saja persyaratan untuk mendaftar?",
+                "Dokumen apa yang perlu dibawa saat pendaftaran?",
+                "Apa saja yang harus saya persiapkan untuk mendaftar di sekolah ini?"
+                ],
+            "responses": ["persyaratan yang perlu disiapkan adalah:\n1. Fotokopi Raport Semester 5 atau Surat Keterangan Lulus\n2. Fotokopi Kartu Pelajar/Kartu NISN\n3. Pas Foto Hitam Putih 4 Lembar (3x4)\n4. Fotokopi KIP (jika ada)\n5. Fotokopi Kartu Keluarga\n6. Fotokopi Akta Kelahiran"]
+        },
+        {
+            "tag": "formulir_pendaftaran",
+            "patterns": [
+                "cara mengisi formulir pendaftaran ?",
+                "dimana saya bisa mendapatkan formulir ?",
+                "bagaimana cara mengisi formulirnya ?",
+                "formulir pendaftaran ada dimana ?",
+                "Formulir Pendaftaran",
+                "Dimana link formulir pendaftaran?",
+                "Apakah formulir pendaftaran bisa diunduh?",
+                "Bagaimana cara mendapatkan formulir pendaftaran online?"
+            ],
+            "responses": [
+                "Formulir pendaftaran dapat diisi secara online melalui website kami pada link di bawah ini\n\n https://ppdb.smkkesatrianpwt.sch.id/daftar/ \n\nPastikan Anda mengisi data dengan benar sesuai petunjuk yang tersedia."
+            ]
+        },
+        {
+            "tag": "spp_dan_uang_masuk",
+            "patterns": [
+                "Berapa biaya SPP?",
+                "Informasi uang masuk sekolah",
+                "berapa biaya bulanan nya ?",
+                "Rincian biaya sekolah apa saja?",
+                 "Berapa biaya sekolah per bulan?",
+                "Berapa uang pangkal yang harus dibayar?",
+                "Biaya pendidikan di sekolah ini berapa?",
+                "Biaya SPP dan uang masuk"
+                ],
+            "responses": ["Untuk informasi SPP dan uang masuk, hubungi admin sekolah:\n- Pak Agung: 085227389777\n- Pak Hanin: 081226413178"]
+        },
+        {
+            "tag": "biaya_pendaftaran",
+            "patterns": [
+                "Berapa biaya pendaftaran?",
+                "Apakah mendaftar dikenakan biaya?",
+                "Pendaftaran bayar berapa?",
+                "Biaya pendaftaran sekolah berapa?",
+                "Apakah ada biaya pendaftaran?",
+                "Gratis atau berbayar?",
+                "Apakah saya perlu membayar untuk mendaftar?",
+                "Biaya pendaftaran"
+                ],
+            "responses": ["Pendaftaran di sekolah kami tidak memungut biaya apapun."]
+        },
+        {
+            "tag": "jurusan_yang_dibuka",
+            "patterns": [
+                "Apa saja jurusan yang tersedia?",
+                "Jurusan apa yang ada di sekolah ini?",
+                "Bisa kasih tahu jurusan yang dibuka?",
+                "Jurusan di sekolah ini apa saja?",
+                "Jurusan yang dibuka",
+                "Program studi apa saja yang ditawarkan?",
+                "Jurusan apa saja yang ada di SMK ini?",
+                "Apa saja pilihan jurusan di sekolah?"
+            ],
+            "responses": [
+                "Berikut daftar jurusan yang tersedia di sekolah kami:\n1. Desain Komunikasi Visual (DKV)\n2. Teknik Elektronika (TE)\n3. Teknik Komputer dan Jaringan (TKJ).\n4 Teknik Otomotif (TO)\n  -Teknik Kendaraan Ringan (TKR)\n  -Teknik Sepeda Motor (TSM)"
+            ]
+        },
+        {
+            "tag": "lokasi_sekolah",
+            "patterns": [
+                "Di mana lokasi sekolah?",
+                "Alamat sekolah apa?",
+                "Lokasi pendaftaran di mana?",
+                "Sekolah berada di mana ?",
+                "dimana Tempat Pendaftaran ?",
+                 "Di mana alamat sekolah ini?",
+                "Sekolah ini terletak di mana?",
+                "Di mana saya bisa menemukan sekolah ini?"
+
+            ],
+            "responses": ["Sekolah kami berlokasi di Jl. Kesatrian No. 62, Sokanegara, Purwokerto Timur."]
+        },
+        {
+            "tag": "fasilitas_sekolah",
+            "patterns": [
+                "Apa fasilitas sekolahnya?",
+                "Fasilitas yang disediakan apa saja?",
+                "Ada fasilitas apa di sekolah ini?",
+                "Fasilitas laboratorium komputernya bagaimana?",
+                "Fasilitas sekolah",
+                "Apa saja fasilitas yang ada di sekolah?",
+                "Fasilitas apa saja yang dimiliki sekolah ini?",
+                "Apakah sekolah ini punya perpustakaan?"
+
+            ],
+            "responses": ["Berikut adalah fasilitas yang tersedia di sekolah kami:\n1. Bengkel Teknik Kendaraan Ringan / Bengkel Daihatsu School Skill Center\n2. Bengkel Otomotif Teknik Bisnis Sepeda Motor Standart Yamaha\n3. Dua Laboratorium Teknik Audio Video\n4. Laboratorium Fiber Optic Standar Telkom\n5. Panasonic Auto Service\n6. Tiga Laboratorium Multimedia\n7. Studio Film\n\nSilahkan kunjungi link dibawah ini untuk melihat fasilitas lainnya di SMK Kesatrian Purwokerto\nhttps://smkkesatrianpwt.sch.id/fasilitas.php "]
+        },
+        {
+            "tag": "akreditasi_sekolah",
+            "patterns": [
+                "Akreditasi sekolah apa?",
+                "Sekolah ini terakreditasi apa?",
+                "Apa akreditasi sekolah ini?",
+                "berakreditasi apa SMK Kesatrian Purwokerto ?",
+                "Akreditasi SMK Kesatrian Purwokerto",
+                 "Berapa nilai akreditasi sekolah ini?",
+                "Apa status akreditasi sekolah?",
+                "Apakah sekolah ini sudah terakreditasi?"
+            ],
+            "responses": ["Sekolah kami memiliki akreditasi A yang menunjukkan kualitas pendidikan terbaik sesuai dengan standar nasional."]
+        },
+        {
+            "tag": "nilai_pendaftaran",
+            "patterns": [
+                "Nilai rata-rata apa untuk mengisi formulir ?",
+                "Nilai apa yang diperlukan saat pendaftaran?",
+                "Kolom nilai di formulir diisi dengan nilai apa?",
+                "Nilai apa yang harus saya sertakan di formulir ini ?",
+                "Nilai yang dipakai untuk pendaftaran",
+                 "Nilai raport semester berapa yang dipakai?",
+                "Nilai apa yang perlu diisi di formulir pendaftaran?",
+                "Apakah ada batas minimal nilai untuk pendaftaran?"
+            ],
+            "responses": ["Anda dapat menggunakan Nilai Rata Rata di semester 5 / Rata-rata nilai akhir SKHU/S dalam bentuk Puluhan (cth. 85)"]
+        },
+        {
+            "tag": "jurusan_desain_komunikasi_visual",
+            "patterns": [
+                "Apa yang dipelajari di jurusan Desain Komunikasi Visual?",
+                "Apa itu jurusan DKV ?",
+                "Materi apa saja yang diajarkan di Desain Komunikasi Visual ?",
+                "Jurusan DKV itu tentang apa?",
+                "Apa saja yang dipelajari di DKV?",
+                "DKV belajar apa?",
+                "Apa fokus pembelajaran di jurusan Desain Komunikasi Visual?",
+                "Di jurusan DKV, kita belajar apa saja?"
+            ],
+            "responses": [
+                "Jurusan Desain Komunikasi Visual mempelajari cara menyampaikan pesan menggunakan media visual seperti desain grafis, animasi, dan ilustrasi."
+            ]
+        },
+        {
+            "tag": "jurusan_teknik_kendaraan_ringan",
+            "patterns": [
+                "Apa yang dipelajari di jurusan Teknik Kendaraan Ringan",
+                "Bisa ceritakan tentang TKR ?",
+                "Materi apa saja yang diajarkan di Teknik Kendaraan Ringan ?",
+                "Jurusan TKR itu mempelajari apa?",
+                 "Apa fokus pembelajaran di jurusan Teknik Kendaraan Ringan?",
+                  "Di jurusan TKR, kita belajar apa saja?",
+                  "Apa saja materi yang diajarkan di TKR?",
+                  "Apa sih yang dipelajari di Teknik Kendaraan Ringan?"
+                ],
+            "responses": [
+                "Jurusan Teknik Kendaraan Ringan mempelajari perawatan, perbaikan, dan perakitan kendaraan bermotor seperti mobil."
+            ]
+        },
+        {
+            "tag": "jurusan_teknik_sepeda_motor",
+            "patterns": [
+                "Apa yang dipelajari di jurusan Teknik Sepeda Motor ?",
+                "Bisa jelaskan tentang jurusan TSM ?",
+                "Materi apa saja yang ada di Teknik Sepeda Motor ?",
+                "Jurusan TSM itu belajar apa?",
+                "Apa saja yang dipelajari di TSM?",
+                "Apa itu jurusan TSM?",
+                "TSM belajar apa?",
+                "Apa saja materi yang diajarkan di TSM?"
+            ],
+            "responses": [
+                "Jurusan Teknik Sepeda Motor mempelajari perawatan dan perbaikan sepeda motor, baik dari segi mesin maupun sistem kelistrikan."
+            ]
+        },
+        {
+            "tag": "jurusan_teknik_audio_video",
+            "patterns": [
+                "Apa yang dipelajari di jurusan Teknik Audio Video?",
+                "Bisa jelaskan tentang TAV?",
+                "Materi apa saja yang ada di Teknik Audio Video?",
+                "Jurusan TAV itu belajar apa?",
+                "Apa saja materi yang diajarkan di TAV?",
+                "Apa sih yang dipelajari di Teknik Audio Video?",
+                "Jurusan Teknik Audio Video itu tentang apa?",
+                "Apa saja yang dipelajari di TAV?"
+            ],
+            "responses": [
+                "Jurusan Teknik Audio Video mempelajari tentang instalasi, perawatan, dan perbaikan perangkat audio video, seperti sistem tata suara, peralatan perekaman, dan sistem penyiaran."
+            ]
+        },
+        {
+            "tag": "jurusan_teknik_komputer_dan_jaringan",
+            "patterns": [
+                "Apa yang dipelajari di jurusan Teknik Komputer dan Jaringan ?",
+                "Bisa ceritakan tentang jurusan atau TKJ ?",
+                "Materi apa saja yang ada di Teknik Komputer dan Jaringan ?",
+                "Jurusan TKJ itu mempelajari apa?",
+                "Di jurusan TKJ, kita belajar apa saja?",
+                "Apa saja materi yang diajarkan di TKJ?",
+                "Apa sih yang dipelajari di Teknik Komputer dan Jaringan?",
+                "Jurusan Teknik Komputer dan Jaringan itu tentang apa?"
+            ],
+            "responses": [
+                "Jurusan Teknik Komputer dan Jaringan mempelajari instalasi, perawatan, dan pengelolaan jaringan komputer serta perangkat keras komputer."
+            ]
+        },
+        {
+            "tag": "alur_pendaftaran",
+            "patterns": [
+                "Bagaimana cara mendaftar?",
+                "Seperti apa alur pendaftarannya?",
+                "Bagaimana proses pendaftaran siswa baru?",
+                "Apa saja langkah-langkah untuk mendaftar online?",
+                "Gimana cara daftar di sekolah ini?",
+                "Daftar online gimana caranya?",
+                "Prosedur pendaftaran seperti apa?",
+                "Saya bingung cara daftar nya ?"
+            ],
+            "responses": [
+                "Berikut adalah langkah-langkah untuk mendaftar secara online:\n1. Isi formulir pendaftaran yang dapat ditemukan di halaman pendaftaran website.\n2. Lengkapi semua data yang diminta dengan benar.\n3. Unduh dan simpan bukti pendaftaran yang telah diselesaikan.\n4. Tunggu konfirmasi pendaftaran dan informasi lebih lanjut di website."
+            ]
+        },
+        {
+          "tag": "daftar_ulang",
+          "patterns": [
+              "Bagaimana cara melakukan daftar ulang?",
+              "Apa saja langkah-langkah untuk daftar ulang?",
+              "Kapan waktu daftar ulang dibuka?",
+              "daftar ulang",
+               "Prosedur daftar ulang bagaimana?",
+              "Apa saja yang perlu disiapkan untuk daftar ulang?",
+              "Dimana tempat daftar ulang?",
+              "Apakah ada biaya daftar ulang?"
+          ],
+          "responses": [
+              "Untuk daftar ulang anda dapat melakukan pembayaran sesuai dengan yang tertera pada surat diterima langsung ke sekolah, dengan melengkapi berkas-berkas yang diminta seperti Kartu Keluarga, Ijazah, Nilai Rapot, dan Kartu pelajar (Bila ada)."
+          ]
+      },
+      {
+          "tag": "berkas_daftar_ulang",
+          "patterns": [
+              "Apa saja berkas yang di butuhkan untuk daftar ulang ?",
+              "Dokumen apa saja untuk daftar ulang ?",
+              "Berkas apa saja yang harus saya siapkan untuk daftar ulang?",
+              "Dokumen apa yang diperlukan saat daftar ulang?",
+               "Daftar ulang perlu bawa apa saja?",
+              "Persyaratan daftar ulang apa saja?",
+              "Berkas-berkas apa yang harus disiapkan untuk daftar ulang?",
+              "Bawa dokumen apa saja buat daftar ulang ?"
+          ],
+          "responses": [
+              "Berkas yang perlu disiapkan untuk melakukan Daftar ulang yaitu :\n1. Kartu keluarga\n2. Ijazah.\n3. Nilai Rapot.\n4. Kartu Pelajar (Bila ada)"
+          ]
+      },
+      {
+          "tag": "pengumuman_diterima",
+          "patterns": [
+              "Kapan pengumuman penerimaan siswa baru akan dirilis?",
+              "Di mana saya bisa melihat pengumuman penerimaan siswa baru?",
+              "Apa yang harus dilakukan setelah dinyatakan lolos seleksi di sekolah?",
+              "Dokumen apa saja yang perlu disiapkan setelah pengumuman?",
+              "Kapan pengumuman hasil seleksi?",
+              "Bagaimana cara mengetahui saya diterima atau tidak?",
+              "Di mana saya bisa cek pengumuman penerimaan?",
+              "Pengumuman nya kapan ?"
+          ],
+          "responses": [
+              "Pengumuman penerimaan siswa baru dapat dilihat pada saat Anda mengunduh bukti pendaftaran. anda dapat Link berikut\n\nhttps://ppdb.smkkesatrianpwt.sch.id/buktidaftar/\n\n Lalu masukan NIK anda."
+          ]
+      },
+      {
+            "tag": "ukuran_pas_foto",
+            "patterns": [
+                "Berapa ukuran pas foto yang dibutuhkan?",
+                "Ukuran pas foto untuk pendaftaran?",
+                "Ukuran foto berapa?",
+                "Ukuran pas foto nya berapa?",
+                "Ukuran foto yang sesuai berapa?",
+                "Ukuran pas foto yang harus dibawa?",
+                "Untuk pas foto, ukurannya berapa?",
+                "Ukuran foto yang dibutuhkan untuk pendaftaran?"
+            ],
+            "responses": [
+                "Ukuran pas foto yang dibutuhkan adalah 3x4 dengan latar belakang merah."
+            ]
+        },
+        {
+            "tag": "visi_misi_sekolah",
+            "patterns": [
+                "Apa visi misi sekolah ini?",
+                "Visi dan misi sekolah?",
+                "Apa visi sekolah?",
+                "Apa misi sekolah?",
+                "Bagaimana visi dan misi SMK Kesatrian Purwokerto?",
+                "Bisa jelaskan visi dan misi sekolah?",
+                "Visi misi SMK Kesatrian Purwokerto apa ya?",
+                "Visi dan misi SMK Kesatrian Purwokerto?"
+            ],
+            "responses": [
+                "**Visi:**\nMenjadi lembaga pendidikan dan pelatihan kejuruan yang unggul, berkarakter, berwawasan lingkungan, dan berdaya saing global.\n\n**Misi:**\n1. Menyelenggarakan pendidikan dan pelatihan kejuruan yang berkualitas dan relevan dengan kebutuhan dunia kerja.\n2. Mengembangkan potensi peserta didik agar memiliki karakter yang kuat, berakhlak mulia, dan berwawasan lingkungan.\n3. Meningkatkan kualitas sumber daya manusia dan sarana prasarana pendidikan.\n4. Menjalin kemitraan yang sinergis dengan dunia usaha dan dunia industri."
+            ]
+        },
+        {
+            "tag": "jumlah_siswa_aktif",
+            "patterns": [
+                "Berapa jumlah siswa aktif di sekolah ini?",
+                "Berapa siswa yang aktif?",
+                "Jumlah siswa aktif di SMK Kesatrian Purwokerto?",
+                "Ada berapa siswa di sekolah?",
+                "Berapa banyak siswa yang belajar di sekolah ini?",
+                "Jumlah siswa saat ini?",
+                "Total siswa aktif di SMK Kesatrian Purwokerto?",
+                "Berapa jumlah siswa yang ada di sekolah?"
+            ],
+            "responses": [
+                "Jumlah siswa aktif di SMK Kesatrian Purwokerto saat ini adalah sekitar 2015 siswa."
+            ]
+        },
+        {
+          "tag": "beasiswa",
+          "patterns": [
+              "Apakah ada beasiswa yang tersedia?",
+              "Informasi beasiswa",
+              "Jenis beasiswa apa saja yang ada?",
+              "Bagaimana cara mendapatkan beasiswa?",
+              "Apakah sekolah ini menyediakan beasiswa?",
+              "Beasiswa apa saja yang ditawarkan?",
+              "Bagaimana cara mengajukan beasiswa?",
+              "Bagaimana cara mendapatkan beasiswa?"
+          ],
+          "responses": [
+              "Informasi Beasiswa bisa hubungi admin sekolah kita pada nomer dibwah ini\n\nPak Agung: 085227389777\nPak Hanin: 081226413178"
+          ]
+      },
+        {
+          "tag": "jenjang_karir_dkv",
+          "patterns": [
+            "Apa saja jenjang karir untuk lulusan DKV?",
+            "Prospek kerja DKV?",
+            "Jenjang karir di bidang Desain Komunikasi Visual?",
+            "Pekerjaan apa yang bisa didapatkan setelah lulus DKV?",
+            "Pekerjaan apa yang bisa didapatkan setelah lulus DKV?",
+            "Lulusan DKV bisa kerja apa saja?",
+            "Apa saja peluang karir di bidang DKV?",
+            "Setelah lulus DKV, bisa bekerja di mana saja?"
+          ],
+          "responses": [
+            "Lulusan DKV memiliki peluang karir yang luas, seperti:\n- Desainer Grafis\n- Ilustrator\n- Animator\n- Fotografer\n- Web Designer\n- UI/UX Designer\n- Art Director\n- Creative Director"
+          ]
+        },
+       {
+          "tag": "jenjang_karir_tav",
+          "patterns": [
+            "Jenjang karir untuk lulusan TAV?",
+            "Prospek kerja TAV?",
+            "Jenjang karir di bidang Teknik Audio Video?",
+            "Pekerjaan apa yang bisa didapatkan setelah lulus TAV?",
+            "Lulusan TAV bisa kerja apa saja?",
+            "Apa saja peluang karir di bidang TAV?",
+            "Setelah lulus TAV, bisa bekerja di mana saja?",
+            "Apa saja prospek karir untuk lulusan TAV?"
+          ],
+          "responses": [
+            "Lulusan TAV dapat berkarir di berbagai bidang, seperti:\n- Teknisi Audio Video\n- Sound Engineer\n- Broadcast Engineer\n- Video Editor\n- Multimedia Specialist\n- Operator Kamera"
+          ]
+        },
+        {
+          "tag": "jenjang_karir_tkj",
+          "patterns": [
+            "Jenjang karir lulusan TKJ seperti apa?",
+            "Bagaimana prospek karir di jurusan TKJ?",
+            "Jenjang karir di bidang Teknik Komputer dan Jaringan?",
+            "Pekerjaan apa yang bisa didapatkan setelah lulus TKJ?",
+             "Lulusan TKJ bisa kerja apa saja?",
+            "Apa saja peluang karir bagi lulusan TKJ?",
+            "Setelah lulus TKJ, bisa bekerja di mana saja?",
+            "Apa saja prospek karir untuk lulusan TKJ?"
+          ],
+          "responses": [
+            "Lulusan TKJ memiliki peluang karir di bidang IT, seperti:\n- Network Administrator\n- System Analyst\n- IT Support\n- Programmer\n- Web Developer\n- Database Administrator\n- Cyber Security Specialist"
+          ]
+        },
+        {
+          "tag": "jenjang_karir_tkr",
+          "patterns": [
+            "Jenjang karir untuk lulusan TKR?",
+            "Prospek kerja TKR?",
+            "Bagaimana jenjang karir lulusan Teknik Kendaraan Ringan?",
+            "Pekerjaan apa yang bisa didapatkan setelah lulus TKR?",
+            "Apa pilihan karir untuk alumni TKR?",
+            "Setelah lulus TKR, bisa kerja apa saja?",
+            "Apa saja prospek karir untuk lulusan TKR?",
+            "Lulusan TKR dapat bekerja di bidang apa saja?"
+          ],
+          "responses": [
+            "Lulusan TKR dapat berkarir di industri otomotif, seperti:\n- Mekanik\n- Service Advisor\n- Supervisor Bengkel\n- Teknisi Otomotif\n- Quality Control"
+          ]
+        },
+        {
+          "tag": "jenjang_karir_tsm",
+          "patterns": [
+            "Jenjang karir untuk lulusan TSM?",
+            "Prospek kerja TSM?",
+            "Jenjang karir di bidang Teknik Sepeda Motor?",
+            "Apa saja peluang karir untuk lulusan TSM?",
+            "Pekerjaan apa yang bisa didapatkan setelah lulus TSM?",
+            "Apa prospek kerja di bidang Teknik Sepeda Motor?",
+            "Setelah lulus TSM, bisa bekerja di mana saja?",
+            "Setelah lulus TSM, bisa kerja apa saja?"
+          ],
+          "responses": [
+            "Lulusan TSM dapat berkarir di bengkel atau dealer sepeda motor, sebagai:\n- Mekanik Sepeda Motor\n- Service Advisor\n- Kepala Mekanik\n- Teknisi Sepeda Motor\n- Sales Counter"
+          ]
+        },
+        {
+          "tag": "biaya_perjurusan",
+          "patterns": [
+            "Berapa biaya per jurusan?",
+            "Biaya masuk per jurusan?",
+            "Berapa biaya untuk jurusan TKJ?",
+            "Berapa biaya untuk jurusan DKV?",
+            "Biaya jurusan TKR?",
+            "Biaya masuk jurusan TSM?",
+            "rincian biaya di jurusan TAV?",
+            "Biaya untuk jurusan TKR?"
+          ],
+          "responses": [
+            "Untuk informasi biaya per jurusan, silahkan hubungi admin sekolah:\n- Pak Agung: 085227389777\n- Pak Hanin: 081226413178"
+          ]
+        },
+        {
+          "tag": "apa_itu_ppdb",
+          "patterns": [
+            "Apa itu PPDB?",
+            "Penerimaan peserta didik baru itu apa?",
+            "Apa kepanjangan PPDB?",
+            "PPDB kepanjangannya apa?",
+            "Apa kepanjangan PPDB?",
+            "PPDB kepanjangannya apa?",
+            "Apa yang dimaksud dengan Penerimaan peserta didik baru ?",
+            "Apa yang dimaksud dengan PPDB?"
+          ],
+          "responses": [
+            "PPDB adalah singkatan dari Penerimaan Peserta Didik Baru. \nPPDB merupakan proses pendaftaran siswa baru untuk masuk ke sekolah."
+          ]
+        },
+        {
+          "tag": "prestasi_sekolah",
+          "patterns": [
+            "Apa saja prestasi yang pernah diraih sekolah ini?",
+            "Prestasi sekolah ini apa saja?",
+            "Prestasi akademik sekolah?",
+            "Prestasi non-akademik sekolah?",
+            "Apa saja penghargaan yang pernah diterima sekolah?"
+          ],
+          "responses": [
+            "SMK Kesatrian Purwokerto telah meraih berbagai prestasi, baik di bidang akademik maupun non-akademik. Beberapa di antaranya adalah:\n- juara 1 Daihatsu Skill Contest tingkat Jawa Tengah\n- juara 2 LKS bidang BROADCASTING tingkat Kabupaten\n- juara 3 LKS Bidang IT Software Applicationn\n\ndan masih banyak lagi prestasi yang ada di SMK Kesatrian Purwokerto"
+          ]
+        },
+        {
+    "tag": "tahun_berdiri",
+    "patterns": [
+        "Kapan SMK Kesatrian Purwokerto berdiri?",
+        "Tahun berapa SMK Kesatrian Purwokerto didirikan?",
+        "Kapan sekolah ini didirikan?",
+        "Tahun berdiri SMK Kesatrian Purwokerto",
+        "Sejak kapan SMK Kesatrian Purwokerto ada?",
+        "SMK Kesatrian Purwokerto berdiri tahun berapa?"
+
+    ],
+    "responses": [
+        "SMK Kesatrian Purwokerto berdiri pada tahun 1996."
+    ]
+}
+    ]
+}
